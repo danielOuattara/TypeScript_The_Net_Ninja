@@ -2,15 +2,19 @@ let greeting = () => {
   return "Hello World !";
 };
 
-greeting = "some thing"  // X Incorrect
+console.log(greeting());
+
+// greeting = "Hello!"  // X Incorrect: greet is known to be a function, not a string
 
 //----------------------------------------------------
 
-let greeting2: Function;
+let greeting2: Function; // fucntion declaration
 
 greeting2 = () => {
-  return "Hello World !";
+  console.log("Hello World !");
 };
+
+greeting2();
 
 //------------------------------------------------------
 
@@ -22,17 +26,22 @@ console.log(add(4, 7));
 // console.log(add(4, '7')); // X Incorrect
 
 //-------------------------------------------------------
-// optionnal argument for : c.  Required parameter must come first
+
+// optionnal argument : c.
+// Required parameter must come first
+
 const add2 = (a: number, b: number, c?: number | string) => {
-  console.log(c);
+  console.log("c = ", c);
   return a + b;
 };
 
-console.log(add2(1, 3, 5));
-console.log(add2(1, 3));
+console.log("add2(1, 3, 5) = ", add2(1, 3, 5));
+console.log("add2(1, 3) = ", add2(1, 3));
 
 //--------------------------------------------------------
-// default parameter for c 
+
+// default parameter for c
+
 const add3 = (a: number, b: number, c: number = 1) => {
   return (a + b) * c;
 };
@@ -43,13 +52,18 @@ console.log(add3(3, 7, 5));
 console.log(add3(3, 7));
 
 //--------------------------------------------------------
-// function type return 
+
+// function type return
+
 const add4 = (a: number, b: number, c: number = 1): number => {
   return (a + b) * c;
 };
 let resultAdd4 = add3(4, 3, 2); // type of type of add4
 
-// void function ---------------------------------------
+// ---------------------------------------
+
+// void function
+
 const add5 = (a: number, b: number, c: number = 1) => {
   console.log(a + b);
 };
