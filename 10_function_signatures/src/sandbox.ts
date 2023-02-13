@@ -6,16 +6,17 @@ let greeting: Function;
 
 let greet: (a: string, b: string) => void; // <=== function signature
 
+// 'greet' definition must match the above signature
 greet = (name, greeting) => {
-  // greet here must match the above signature
   console.log(`${name} says ${greeting}`);
 };
 
 /* exemple 2 
 ===============*/
 
-let calc: (a: number, b: number, c: string) => number;
+let calc: (a: number, b: number, c: string) => number; // <=== function signature
 
+// 'calc' definition must match the above signature
 calc = (number1, number2, action) => {
   if (action === "add") {
     return number1 + number2;
@@ -33,10 +34,10 @@ logDetails = (ninja: { name: string; age: number }) => {
   console.log(`${ninja.name} is ${ninja.age} y.o`);
 };
 
-// with aliases
+// using aliases
 
-type person = { name: string; age: number };
+type Person = { name: string; age: number };
 
-logDetails = (ninja: person) => {
-  console.log(`${ninja.name} is ${ninja.age} y.o`);
+logDetails = (samourai: Person) => {
+  console.log(`${samourai.name} is ${samourai.age} y.o`);
 };
