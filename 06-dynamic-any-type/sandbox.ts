@@ -3,10 +3,9 @@
 let age: any = 25;
 
 age = "Hello"; // -> accepted
-
-age = true; // -> accepted 
-
-age = {  // -> accepted
+age = true; // -> accepted
+age = {
+  // -> accepted
   name: "Daniel",
 };
 
@@ -54,7 +53,7 @@ console.log(ninjaSuper);
 ninjaSuper = {
   // giving key-value to ninjaSuper object
   name: 29,
-  ageOld: "Ruy", // Error : cant revert string and number
+  ageOld: "Ruy", // Error : cannot revert string and number
 };
 
 console.log(ninjaSuper);
