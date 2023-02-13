@@ -1,40 +1,46 @@
-// 1
+// ------------------------ 1
 const logDetails = (uuid: string | number, item: string) => {
   console.log(`${item} has a uuid of ${uuid}`);
 };
 
-// 2
+logDetails("123", "x-plane");
+
+// ------------------------ 2
 const greet = (user: { name: string; uuid: string | number }) => {
-  console.log(`${user.name} say hello !`);
+  console.log(` ${user.name} uuid is ${user.uuid}`);
 };
 
-// 3
+greet({ name: "Daniel", uuid: 13453 });
+
+//------------------------- 3
 
 const greet2 = (user: { name: string; uuid: string | number }) => {
   console.log(`${user.name} say hello !`);
 };
 
-// there is many Code Rep above, how ot handle this ?
+/* There is many Code Rep above, how ot handle this ? 
+------------------------------------------------------*/
 
-// ----------------------------------------------------------------------
+/* 
+functions that use the same parameter: 
+to reduce verbose => use of "type" alliases to DRY 
 
-/* functions that use the same parameter: 
-   to reduce verbose => use of "type" alliases to DRY 
+===> keyword : "type" used to define aliases
+type definition: types can be combined
 */
 
-// ===> keyword : "type" used to define aliases
+// define a alias
+type StringOrNumber = string | number;
 
-// type definition: types can be combined
-
-type StringOrNumber = string | number; // define a alias
-type ObjectWithName = { name: string; uuid: StringOrNumber }; // define another aliase
-
-// new 1
+// new -------------------------- 1
 const logDetails2 = (uuid: StringOrNumber, item: string) => {
   console.log(`${item} has a uuid of ${uuid}`);
 };
 
-// new 2
+// define another aliase
+type ObjectWithName = { name: string; uuid: StringOrNumber };
+
+// new --------------------------- 2
 const greet3 = (user: { name: string; uuid: StringOrNumber }) => {
   console.log(`${user.name} say hello !`);
 };
