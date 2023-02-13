@@ -11,5 +11,5 @@ inputs.forEach((input) => {
 });
 
 let numbers = [0, 1, 3, 4];
-
+console.log("numbers = ", numbers);
 let username = "John";

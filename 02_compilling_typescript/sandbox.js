@@ -7,4 +7,5 @@ inputs.forEach(function (input) {
     console.log(input);
 });
 var numbers = [0, 1, 3, 4];
+console.log("numbers = ", numbers);
 var username = "John";
