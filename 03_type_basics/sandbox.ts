@@ -1,12 +1,12 @@
 // straight type
 
-const character = "Black"; // character will also be a string
-// character = "Leo"; // --> Err: const cannot change
+const character = "Black"; // 'character' is a invariable string
+// character = "Leo";      // --> Err: const; cannot change
 
-let city = "Dubai"; // character will also be a string only
-// city = 30; // Error
+let city = "Dubai"; // 'city' will hold string only
+// city = 30;       // Error
 
-let age = 30; // age will always be a number only
+let age = 30; // 'age' will always hold a number
 
 let isBlackBlet = false;
 
@@ -34,3 +34,11 @@ const circonference2 = (diameter) => {
 };
 
 console.log(circonference2("A"));
+
+/* 
+
+NOTE: All the control process built in circonfrence2() method
+      is quickly and simply handled in circonfernece() method
+      by TypeScript in few lines
+
+*/
