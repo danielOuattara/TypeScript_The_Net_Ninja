@@ -1,2 +1,2 @@
 
-npm i -g trypescript
+npm i -g typescript
