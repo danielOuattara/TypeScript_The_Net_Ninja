@@ -1,5 +1,5 @@
 // ---------------------------------------------
-// implicit types
+// implicit types: automatic inference made by TypeScript itself
 
 let age = 3;
 const max_number = 200;
@@ -73,7 +73,9 @@ let agent2: {
   age: number;
 };
 
-agent2 = {  // Error: agent32 declaration must content all of the proprieties when initialized
+// Error: agent32 declaration must content
+// all of the proprieties when initialized
+agent2 = {
   name: "Daniel",
 };
 
@@ -81,5 +83,5 @@ agent2 = {
   name: "daniel",
   nationality: "marsian",
   age: 14143,
-  skills: [ "swim", "fight", "slide"], // X Incorrect: 'skills' does not exist in type of agent2
+  skills: ["swim", "fight", "slide"], // X Incorrect: 'skills' does not exist in type of agent2
 };
