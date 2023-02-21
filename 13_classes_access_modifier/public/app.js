@@ -2,17 +2,17 @@
 /* Classes
 ============= */
 class Invoice {
-    constructor(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    constructor(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     format() {
         return `${this.client} owes ${this.amount} for ${this.details}`;
     }
 }
 const invoiceOne = new Invoice("Daniel", "on React.js", 2000);
-const invoiceTwo = new Invoice("Gaîa", "on Patte patrouille", 200);
+const invoiceTwo = new Invoice("Gaia", "on Paw patrol", 200);
 console.log(invoiceOne.client);
 console.log(invoiceOne.format());
 console.log(invoiceTwo.format());
@@ -24,6 +24,8 @@ invoices.push(invoiceOne);
 invoices.push(invoiceTwo);
 console.log("invoices = ", invoices);
 //-----------------------------------
+// shorted syntax
+//
 class Invoice2 {
     constructor(client, details, amount) {
         this.client = client;
@@ -35,12 +37,12 @@ class Invoice2 {
     }
 }
 const invoiceThree = new Invoice("Daniel", "on React.js", 2000);
-const invoiceFour = new Invoice("Gaîa", "on Patte patrouille", 200);
+const invoiceFour = new Invoice("Gaia", "on Paw patrol", 200);
 console.log(invoiceOne.client);
 console.log(invoiceThree.format());
 console.log(invoiceFour.format());
 //---------------------------------------------------------------
-/* Typscript DOM & Type Casting
+/* Typescript DOM & Type Casting
 ==================================*/
 const anchor = document.querySelector("a");
 console.log("anchor = ", anchor);

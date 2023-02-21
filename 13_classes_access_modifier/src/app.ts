@@ -7,10 +7,10 @@ class Invoice {
   private details: string;
   protected amount: number;
 
-  constructor(c: string, d: string, a: number) {
-    this.client = c;
-    this.details = d;
-    this.amount = a;
+  constructor(client: string, details: string, amount: number) {
+    this.client = client;
+    this.details = details;
+    this.amount = amount;
   }
 
   format() {
@@ -19,7 +19,7 @@ class Invoice {
 }
 
 const invoiceOne = new Invoice("Daniel", "on React.js", 2000);
-const invoiceTwo = new Invoice("Gaîa", "on Patte patrouille", 200);
+const invoiceTwo = new Invoice("Gaia", "on Paw patrol", 200);
 
 console.log(invoiceOne.client);
 
@@ -30,7 +30,7 @@ console.log(invoiceTwo.format());
 
 //let invoices: string[] = [];
 
-let invoices: Invoice[] = [];  // <-- Only object instantiated from Invoice class
+let invoices: Invoice[] = []; // <-- Only object instantiated from Invoice class
 
 // invoices.push({client: "Amaya", details:"Bamabi", amount:10})  // <-- Not allowed, read above
 
@@ -39,14 +39,16 @@ invoices.push(invoiceTwo);
 
 console.log("invoices = ", invoices);
 
-
 //-----------------------------------
+
+// shorted syntax
+//
 
 class Invoice2 {
   constructor(
     readonly client: string,
     private details: string,
-    protected amount: number
+    protected amount: number,
   ) {}
 
   format() {
@@ -55,7 +57,7 @@ class Invoice2 {
 }
 
 const invoiceThree = new Invoice("Daniel", "on React.js", 2000);
-const invoiceFour = new Invoice("Gaîa", "on Patte patrouille", 200);
+const invoiceFour = new Invoice("Gaia", "on Paw patrol", 200);
 
 console.log(invoiceOne.client);
 
@@ -64,7 +66,7 @@ console.log(invoiceFour.format());
 
 //---------------------------------------------------------------
 
-/* Typscript DOM & Type Casting
+/* Typescript DOM & Type Casting
 ==================================*/
 
 const anchor = document.querySelector("a");
