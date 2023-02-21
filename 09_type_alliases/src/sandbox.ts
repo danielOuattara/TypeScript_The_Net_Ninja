@@ -23,7 +23,7 @@ const greet2 = (user: { name: string; uuid: string | number }) => {
 
 /* 
 functions that use the same parameter: 
-to reduce verbose => use of "type" alliases to DRY 
+to reduce verbose => use of "type" aliases to DRY 
 
 ===> keyword : "type" used to define aliases
 type definition: types can be combined
@@ -37,7 +37,7 @@ const logDetails2 = (uuid: StringOrNumber, item: string) => {
   console.log(`${item} has a uuid of ${uuid}`);
 };
 
-// define another aliase
+// define another aliases; types can be combined
 type ObjectWithName = { name: string; uuid: StringOrNumber };
 
 // new --------------------------- 2
