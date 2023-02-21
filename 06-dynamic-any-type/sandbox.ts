@@ -2,8 +2,8 @@
 
 let age: any = 25;
 
-age = "Hello"; // -> accepted
 age = true; // -> accepted
+age = "Hello"; // -> accepted
 age = {
   // -> accepted
   name: "Daniel",
@@ -15,11 +15,11 @@ console.log(age);
 
 let mixed: any[] = [];
 mixed.push(5);
-mixed.push("Helllo");
+mixed.push("Hello");
 mixed.push(true);
 console.log(mixed);
 
-// declaring object sructure
+// declaring object structure
 let ninja: { name: any; ageOld: any };
 
 ninja = {
@@ -40,12 +40,12 @@ console.log(ninja);
 
 //---------------------
 
-let ninjaSuper: { name: any; ageOld: number };
+let ninjaSuper: { name: any; age: number };
 
 ninjaSuper = {
   // giving key-value to ninjaSuper object
   name: "Ryu",
-  ageOld: 29,
+  age: 29,
 };
 
 console.log(ninjaSuper);
@@ -53,7 +53,7 @@ console.log(ninjaSuper);
 ninjaSuper = {
   // giving key-value to ninjaSuper object
   name: 29,
-  ageOld: "Ruy", // Error : cannot revert string and number
+  age: "Ruy", // Error : cannot revert string and number
 };
 
 console.log(ninjaSuper);
