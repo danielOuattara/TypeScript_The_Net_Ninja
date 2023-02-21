@@ -66,6 +66,10 @@ agent1 = {
   age: 47,
 };
 
+// agent1 = "007"; // Error: Type 'string' is not assignable to type 'object'.ts(2322)
+
+//
+
 // explicit object declaration
 let agent2: {
   name: string;
@@ -81,7 +85,7 @@ agent2 = {
 
 agent2 = {
   name: "daniel",
-  nationality: "marsian",
+  nationality: "martian",
   age: 14143,
   skills: ["swim", "fight", "slide"], // X Incorrect: 'skills' does not exist in type of agent2
 };
