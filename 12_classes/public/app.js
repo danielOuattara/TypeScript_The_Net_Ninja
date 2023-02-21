@@ -2,23 +2,24 @@
 /* Classes
 ============= */
 class Invoice {
-    constructor(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    constructor(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     format() {
         return `${this.client} owes ${this.amount} for ${this.details}`;
     }
 }
 const invoiceOne = new Invoice("Daniel", "on React.js", 2000);
-const invoiceTwo = new Invoice("Gaïa", "on Patte patrouille", 200);
+const invoiceTwo = new Invoice("Gaïa", "on Paw patrol", 200);
 console.log(invoiceOne.format());
 console.log(invoiceTwo.format());
 //----------------------------------------------------------------------
 //let invoices: string[] = [];
 let invoices = []; // <-- Only object instantiated from Invoice class
-// invoices.push({client: "Amaya", details:"Bamabi", amount:10})  // <-- Not allowed, read above
+// invoices.push({client: "Amaya", details:"Bambi", amount:10})  // <-- Not allowed, read above
+invoices.push(new Invoice("Amaya", "Bambi", 10));
 invoices.push(invoiceOne);
 invoices.push(invoiceTwo);
 console.log("invoices = ", invoices);

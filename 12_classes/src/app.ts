@@ -6,10 +6,10 @@ class Invoice {
   details: string;
   amount: number;
 
-  constructor(c: string, d: string, a: number) {
-    this.client = c;
-    this.details = d;
-    this.amount = a;
+  constructor(client: string, details: string, amount: number) {
+    this.client = client;
+    this.details = details;
+    this.amount = amount;
   }
 
   format() {
@@ -18,25 +18,24 @@ class Invoice {
 }
 
 const invoiceOne = new Invoice("Daniel", "on React.js", 2000);
-const invoiceTwo = new Invoice("Gaïa", "on Patte patrouille", 200);
+const invoiceTwo = new Invoice("Gaïa", "on Paw patrol", 200);
 
 console.log(invoiceOne.format());
 console.log(invoiceTwo.format());
-
 
 //----------------------------------------------------------------------
 
 //let invoices: string[] = [];
 
-let invoices: Invoice[] = [];  // <-- Only object instantiated from Invoice class
+let invoices: Invoice[] = []; // <-- Only object instantiated from Invoice class
 
-// invoices.push({client: "Amaya", details:"Bamabi", amount:10})  // <-- Not allowed, read above
+// invoices.push({client: "Amaya", details:"Bambi", amount:10})  // <-- Not allowed, read above
 
+invoices.push(new Invoice("Amaya", "Bambi", 10));
 invoices.push(invoiceOne);
 invoices.push(invoiceTwo);
 
 console.log("invoices = ", invoices);
-
 
 //---------------------------------------------------------------
 
