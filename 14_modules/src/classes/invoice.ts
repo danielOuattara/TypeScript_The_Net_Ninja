@@ -2,7 +2,7 @@ export class Invoice {
   constructor(
     readonly client: string,
     private details: string,
-    protected amount: number
+    protected amount: number,
   ) {}
 
   format() {

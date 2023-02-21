@@ -5,7 +5,7 @@ console.log(invoiceThree.client);
 console.log(invoiceThree.format());
 console.log(invoiceFour.format());
 //---------------------------------------------------------------
-/* Typscript DOM & Type Casting
+/* Typescript DOM & Type Casting
 ==================================*/
 const anchor = document.querySelector("a");
 console.log("anchor = ", anchor);
