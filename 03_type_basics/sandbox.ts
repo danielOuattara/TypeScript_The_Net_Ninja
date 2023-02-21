@@ -1,16 +1,15 @@
 // straight type
 
-const character = "Black"; // 'character' is a invariable string
+const character = "Black"; // 'character' is an invariable string
 // character = "Leo";      // --> Err: const; cannot change
 
 let city = "Dubai"; // 'city' will hold string only
 // city = 30;       // Error
+city = "Amsterdam ";
 
 let age = 30; // 'age' will always hold a number
 
-let isBlackBlet = false;
-
-city = "Amsterdam ";
+let isBlackBlet = false; // isBlackBelt is always a boolean
 
 // -----------------------------------
 
