@@ -8,7 +8,7 @@ console.log(greeting());
 
 //----------------------------------------------------
 
-let greeting2: Function; // fucntion declaration
+let greeting2: Function; // function declaration
 
 greeting2 = () => {
   console.log("Hello World !");
@@ -27,7 +27,7 @@ console.log(add(4, 7));
 
 //-------------------------------------------------------
 
-// optionnal argument : c.
+// optional argument : c.
 // Required parameter must come first
 
 const add2 = (a: number, b: number, c?: number | string) => {

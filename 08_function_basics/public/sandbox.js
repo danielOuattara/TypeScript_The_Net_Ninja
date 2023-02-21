@@ -5,7 +5,7 @@ var greeting = function () {
 console.log(greeting());
 // greeting = "Hello!"  // X Incorrect: greet is known to be a function, not a string
 //----------------------------------------------------
-var greeting2; // fucntion declaration
+var greeting2; // function declaration
 greeting2 = function () {
     console.log("Hello World !");
 };
@@ -17,7 +17,7 @@ var add = function (a, b) {
 console.log(add(4, 7));
 // console.log(add(4, '7')); // X Incorrect
 //-------------------------------------------------------
-// optionnal argument : c.
+// optional argument : c.
 // Required parameter must come first
 var add2 = function (a, b, c) {
     console.log("c = ", c);
