@@ -1,16 +1,19 @@
 "use strict";
 var greeting;
 // () => void
-/* exemple 1
+//
+/* example 1
 ==============*/
 var greet; // <=== function signature
+// 'greet' definition must match the above signature
 greet = function (name, greeting) {
-    // greet here must match the above signature
     console.log("".concat(name, " says ").concat(greeting));
 };
-/* exemple 2
+//
+/* example 2
 ===============*/
-var calc;
+var calc; // <=== function signature
+// 'calc' definition must match the above signature
 calc = function (number1, number2, action) {
     if (action === "add") {
         return number1 + number2;
@@ -19,12 +22,16 @@ calc = function (number1, number2, action) {
         return number1 - number2;
     }
 };
-/* exemple 3
+//
+/* example 3
 ===============*/
 var logDetails;
 logDetails = function (ninja) {
     console.log("".concat(ninja.name, " is ").concat(ninja.age, " y.o"));
 };
-logDetails = function (ninja) {
-    console.log("".concat(ninja.name, " is ").concat(ninja.age, " y.o"));
+logDetails({ name: "Anna", age: 37 });
+var logDetails2 = function (obj) { return undefined; };
+logDetails2 = function (samurai) {
+    console.log("".concat(samurai.name, " is ").concat(samurai.age, " y.o"));
 };
+logDetails2({ name: "John", age: 32 });

@@ -1,7 +1,8 @@
 let greeting: Function;
 // () => void
 
-/* exemple 1 
+//
+/* example 1 
 ==============*/
 
 let greet: (a: string, b: string) => void; // <=== function signature
@@ -11,7 +12,8 @@ greet = (name, greeting) => {
   console.log(`${name} says ${greeting}`);
 };
 
-/* exemple 2 
+//
+/* example 2 
 ===============*/
 
 let calc: (a: number, b: number, c: string) => number; // <=== function signature
@@ -25,7 +27,8 @@ calc = (number1, number2, action) => {
   }
 };
 
-/* exemple 3 
+//
+/* example 3 
 ===============*/
 
 let logDetails: (obj: { name: string; age: number }) => void;
@@ -33,11 +36,20 @@ let logDetails: (obj: { name: string; age: number }) => void;
 logDetails = (ninja: { name: string; age: number }) => {
   console.log(`${ninja.name} is ${ninja.age} y.o`);
 };
+logDetails({ name: "Anna", age: 37 });
 
-// using aliases
+//
+/* example 4:  using aliases 
+=============================*/
+
+// why is not visible in .js ????
 
 type Person = { name: string; age: number };
 
-logDetails = (samourai: Person) => {
-  console.log(`${samourai.name} is ${samourai.age} y.o`);
+let logDetails2 = (obj: Person) => undefined as void;
+
+logDetails2 = (samurai) => {
+  console.log(`${samurai.name} is ${samurai.age} y.o`);
 };
+
+logDetails2({ name: "John", age: 32 });
