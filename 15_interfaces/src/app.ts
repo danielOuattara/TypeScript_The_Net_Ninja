@@ -61,7 +61,7 @@ console.log(invoiceFour.format());
 
 //---------------------------------------------------------------
 
-/* Typscript DOM & Type Casting
+/* TypeScript DOM & Type Casting
 ==================================*/
 
 const anchor = document.querySelector("a");
