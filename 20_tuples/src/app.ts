@@ -1,6 +1,6 @@
 import { Invoice } from "./classes/invoice.js";
-import { Payment} from "./classes/payment.js";
-import { HasFormatter} from "./interfaces/HasFormatter.js";
+import { Payment } from "./classes/payment.js";
+import { HasFormatter } from "./interfaces/HasFormatter.js";
 import { ListTemplate } from "./classes/ListTemplate.js";
 
 console.log("------------------------------------------------------");
@@ -19,39 +19,45 @@ const amount = document.querySelector("#amount") as HTMLInputElement;
 const ul = document.querySelector("ul")!;
 const list = new ListTemplate(ul);
 
-form.addEventListener("submit", (e:Event) => {
-    e.preventDefault();
+form.addEventListener("submit", (e: Event) => {
+  e.preventDefault();
 
-    // using tuples
+  // using tuples
 
-    let values :[string, string, number ] =  [tofrom.value, details.value, amount.valueAsNumber]
+  let values: [string, string, number] = [
+    tofrom.value,
+    details.value,
+    amount.valueAsNumber,
+  ];
 
-    let doc: HasFormatter;
+  let doc: HasFormatter;
 
-    if(type.value === "invoice") {
-        doc = new Invoice(...values);
-    } else {
-        doc = new Payment(...values);
-    }
+  if (type.value === "invoice") {
+    doc = new Invoice(...values);
+  } else {
+    doc = new Payment(...values);
+  }
 
-    list.render(doc, type.value, "end");
-})
-
+  list.render(doc, type.value, "end");
+});
 
 // TO TUPLES
 
-let arr = ["daniel", 25 , true];
+let arr = ["daniel", 25, true];
 arr[0] = false; // allowed !
-arr[1] = "Julie";  // allowed
+arr[1] = "Julie"; // allowed
 
 // flexible array item
 
 //with tuple => item type is immutable
 
-let myTuple: [ string, number, boolean] = [ "Hello", 23, true]; // allowed 
-myTuple[0] = "Julie"; 
-myTuple[0] = false // X Incorrect
+let myTuple: [string, number, boolean] = ["Hello", 23, true]; // allowed
+myTuple[0] = "Julie";
+// myTuple[0] = false; // X Incorrect
 
-let student : [string, number];
+let student: [string, number];
 
 student = ["Jackie Chang", 223423]; // allowed
+
+student.push("Hello"); // allowed
+console.log(student);
