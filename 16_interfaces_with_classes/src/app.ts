@@ -15,7 +15,7 @@ docs.push(docTwo);
 
 console.log("docs = ", docs);
 
-/* Typscript DOM & Type Casting
+/* Typescript DOM & Type Casting
 =================================*/
 
 // Forms
